@@ -1,13 +1,11 @@
 {
   "name": "@naos/airslate-lerna",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "bin": {
     "airslate-lerna": "./index.js"
   },
   "main": "index.js",
   "repository": "git@github.com:isachivka/publish-hook.git",
   "author": "Igor Sachivka <juicy.igor@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-  }
+  "license": "MIT"
 }
