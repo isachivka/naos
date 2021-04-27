@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.2.1...@naos/airslate-lerna@1.2.2) (2021-04-27)
+
+
+### Bug Fixes
+
+* **airslate-lerna:** Run task only if have published packages ([f74e5fa](https://github.com/isachivka/publish-hook/commit/f74e5fa80644b3800dd835109ed69a575d92926b))
+
+
+
+
+
 ## [1.2.1](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.2.0...@naos/airslate-lerna@1.2.1) (2021-04-27)
 
 **Note:** Version bump only for package @naos/airslate-lerna
