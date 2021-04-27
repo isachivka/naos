@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "naos",
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:isachivka/publish-hook.git",
+  "author": "Igor Sachivka <juicy.igor@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/config-lerna-scopes": "^12.1.1",
+    "@isachivka/cz-conventional-changelog-for-jira": "^1.0.0",
+    "get-monorepo-packages": "^1.2.0",
+    "commitizen": "^4.2.3",
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./commitizen.js"
+    }
+  }
+}
