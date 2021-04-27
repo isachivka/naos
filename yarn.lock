@@ -1874,6 +1874,11 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+data-uri-to-buffer@^3.0.0:
+  version "3.0.1"
+  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/data-uri-to-buffer/-/data-uri-to-buffer-3.0.1.tgz#594b8973938c5bc2c33046535785341abc4f3636"
+  integrity sha1-WUuJc5OMW8LDMEZTV4U0GrxPNjY=
+
 dateformat@^3.0.0:
   version "3.0.3"
   resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
@@ -2242,6 +2247,11 @@ fastq@^1.6.0:
   integrity sha1-u5+5VaBxMKkY62PB9RYcwypdCFg=
   dependencies:
     reusify "^1.0.4"
+
+fetch-blob@^1.0.5:
+  version "1.0.7"
+  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/fetch-blob/-/fetch-blob-1.0.7.tgz#c2ceffcde92dac1613c26289cd006019859ec2aa"
+  integrity sha1-ws7/zektrBYTwmKJzQBgGYWewqo=
 
 figures@^2.0.0:
   version "2.0.0"
@@ -3832,6 +3842,14 @@ node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
+
+node-fetch@^3.0.0-beta.2:
+  version "3.0.0-beta.2"
+  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/node-fetch/-/node-fetch-3.0.0-beta.2.tgz#21dab0112c90d66d5d8b4f1e7a895cae5ac9d391"
+  integrity sha1-IdqwESyQ1m1di08eeolcrlrJ05E=
+  dependencies:
+    data-uri-to-buffer "^3.0.0"
+    fetch-blob "^1.0.5"
 
 node-gyp@^5.0.2:
   version "5.1.1"
