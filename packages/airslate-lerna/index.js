@@ -5,6 +5,7 @@ const fs = require('fs');
 const getPackages = require('get-monorepo-packages');
 const airslateExternal = require('@naos/airslate-external');
 const { ArgumentParser } = require('argparse');
+const parseResult = require('./parseResult');
 
 const parser = new ArgumentParser({
 });
@@ -18,7 +19,7 @@ function onMessage(chunk) {
 }
 
 function onEnd() {
-  const publishedPackages = parseResult(data);
+  const publishedPackages = parseResult(data, getPackages('./'));
   if (publishedPackages) {
     const packagesWithChangelog = appendChangelogs(publishedPackages);
     const normalized = packagesWithChangelog.map(normalize);
@@ -78,34 +79,6 @@ function appendChangelog(pkg) {
   }
 
   return pkg;
-}
-
-/**
- * God help you, again
- */
-function parseResult(text) {
-  const packages = getPackages('./').reduce((acc, pkg) => {
-    acc[pkg.package.name] = pkg.location;
-    return acc;
-  }, {});
-  const singleLine = text.replace(/\n/g, '|');
-  const successText = singleLine.match(/Successfully published:(.+)lerna success/);
-  if (successText && successText[1]) {
-    return successText[1]
-      .replace(/ - /g, '')
-      .split('|')
-      .filter(e => e)
-      .map(pkg => {
-        const version = pkg.match(/[^^]@(.+)/)[1];
-        const name = pkg.replace(`@${version}`, '');
-        return {
-          version,
-          name,
-          location: `./${packages[name]}`,
-        };
-      });
-  }
-  return false;
 }
 
 process.stdin.resume();
