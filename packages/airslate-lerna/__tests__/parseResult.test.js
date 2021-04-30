@@ -1,6 +1,6 @@
-const parseResult = require('../parseResult')
+const parseResult = require("../parseResult");
 
-describe('parseResult', () => {
+describe("parseResult", () => {
   const text = `
 info
  cli using local version of lerna
@@ -26,50 +26,53 @@ lerna success published 4 packages
 
   const packages = [
     {
-      location: 'elements-traverse',
+      location: "elements-traverse",
       package: {
-        name: '@editors/elements-traverse',
-      }
+        name: "@editors/elements-traverse",
+      },
     },
     {
-      location: 'elements',
+      location: "elements",
       package: {
-        name: '@editors/elements',
-      }
+        name: "@editors/elements",
+      },
     },
     {
-      location: 'validations-core',
+      location: "validations-core",
       package: {
-        name: '@editors/validations-core',
-      }
+        name: "@editors/validations-core",
+      },
     },
     {
-      location: 'engine',
+      location: "engine",
       package: {
-        name: '@editors/engine',
-      }
+        name: "@editors/engine",
+      },
     },
-  ]
+  ];
 
-  it('should parse regular lerna result', () => {
-    expect(parseResult(text, packages)).toEqual(
-      [{
-        "location": "./elements-traverse",
-        "name": "@editors/elements-traverse",
-        "version": "1.0.4",
-      }, {
-        "location": "./elements",
-        "name": "@editors/elements",
-        "version": "2.0.0",
-      }, {
-        "location": "./validations-core",
-        "name": "@editors/validations-core",
-        "version": "1.0.4",
-      }, {
-        "location": "./engine",
-        "name": "@editors/engine",
-        "version": "1.0.10",
-      }],
-    );
+  it("should parse regular lerna result", () => {
+    expect(parseResult(text, packages)).toEqual([
+      {
+        location: "./elements-traverse",
+        name: "@editors/elements-traverse",
+        version: "1.0.4",
+      },
+      {
+        location: "./elements",
+        name: "@editors/elements",
+        version: "2.0.0",
+      },
+      {
+        location: "./validations-core",
+        name: "@editors/validations-core",
+        version: "1.0.4",
+      },
+      {
+        location: "./engine",
+        name: "@editors/engine",
+        version: "1.0.10",
+      },
+    ]);
   });
 });

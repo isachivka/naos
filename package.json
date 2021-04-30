@@ -11,7 +11,8 @@
   "license": "MIT",
   "scripts": {
     "commit": "cz",
-    "test": "jest"
+    "test": "jest",
+    "prettier": "prettier --write ."
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
