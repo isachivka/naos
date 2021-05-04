@@ -1,0 +1,8 @@
+{
+  "name": "@bar/c",
+  "version": "1.0.0",
+  "dependencies": {
+    "@foo/a": "1.0.0",
+    "@foo/c": "1.0.0"
+  }
+}

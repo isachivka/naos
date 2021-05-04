@@ -1,0 +1,14 @@
+{
+  "name": "@naos/syncer",
+  "version": "1.0.0",
+  "bin": {
+    "syncer": "./index.js"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:isachivka/publish-hook.git",
+  "author": "Igor Sachivka <juicy.igor@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "argparse": "^2.0.1"
+  }
+}
