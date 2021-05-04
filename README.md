@@ -9,3 +9,6 @@ Repository for storing useful little packages for all occasions
 - `@naos/airslate-lerna`  
   Package parse `lerna publish` output and send `{ name, version, changelog }`
   to [airSlate](https://airslate.com). I create some useful flows in airSlate based on this (like slack notification) 
+
+- `@naos/syncer`  
+  Package can help sync packages versions in yarn mono-repositories.
