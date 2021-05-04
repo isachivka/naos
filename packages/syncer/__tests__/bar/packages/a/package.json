@@ -4,5 +4,11 @@
   "dependencies": {
     "@foo/a": "1.0.0",
     "@foo/b": "1.0.0"
+  },
+  "devDependencies": {
+    "@foo/c": "2.0.0"
+  },
+  "peerDependencies": {
+    "@foo/c": "3.0.0"
   }
 }

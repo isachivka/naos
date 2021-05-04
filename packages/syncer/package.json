@@ -9,6 +9,7 @@
   "author": "Igor Sachivka <juicy.igor@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "argparse": "^2.0.1"
+    "argparse": "^2.0.1",
+    "get-monorepo-packages": "^1.2.0"
   }
 }

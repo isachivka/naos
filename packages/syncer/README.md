@@ -12,7 +12,7 @@ Create in destination repository file: .syncerrc
 
 ```json
 {
-  "versions": {
+  "fixedVersions": {
     "@foo/a": "1.2.1",
     "@foo/b": "1.2.1",
     "@foo/c": "1.2.1"
