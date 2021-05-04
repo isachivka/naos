@@ -13,7 +13,7 @@ jobs:
         with:
           always-auth: true
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://artifactory.infrateam.xyz/api/npm/npm/'
+          registry-url: "https://artifactory.infrateam.xyz/api/npm/npm/"
       - run: yarn --ignore-engines
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
