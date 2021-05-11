@@ -14,7 +14,6 @@ function push() {
   const config = getConfig(path);
   const { fixedVersions } = config;
   const packages = getPackages(path);
-  console.log(packages);
   const latestVersions = {};
   const pushPackages = getPushPackages({
     packages,
