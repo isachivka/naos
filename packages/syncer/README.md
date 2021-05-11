@@ -12,6 +12,7 @@ Create in destination repository file: .syncerrc
 
 ```json
 {
+  "sources": ["../foo"],
   "fixedVersions": {
     "@foo/a": "1.2.1",
     "@foo/b": "1.2.1",

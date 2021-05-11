@@ -5,6 +5,8 @@ const { error } = require("./log");
 const getConfig = require("./getConfig");
 const getPushPackages = require("./push/getPushPackages");
 const commit = require("./push/commit");
+const getLatestPackages = require("./pull/getLatestPackages");
+const printMessage = require("./pull/printMessage");
 const { confirmPush } = require("./push/confirmPush");
 
 const [, , action] = process.argv;
@@ -39,7 +41,12 @@ function push() {
     });
 }
 
-function pull() {}
+function pull() {
+  const config = getConfig(path);
+  const latestPackages = getLatestPackages(config.sources || [], path);
+  printMessage(latestPackages);
+  return latestPackages;
+}
 
 function auto() {}
 
