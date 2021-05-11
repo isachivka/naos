@@ -15,8 +15,8 @@ Create in destination repository file: .syncerrc
   "sources": ["../foo"],
   "fixedVersions": {
     "@foo/a": "1.2.1",
-    "@foo/b": "1.2.1",
-    "@foo/c": "1.2.1"
+    "@foo/b": "1.2.2",
+    "@foo/c": "1.2.3"
   }
 }
 ```

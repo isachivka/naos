@@ -12,11 +12,10 @@ const { confirmPush } = require("./push/confirmPush");
 const [, , action] = process.argv;
 const path = process.cwd();
 
-function push() {
+function push(latestVersions = {}) {
   const config = getConfig(path);
-  const { fixedVersions } = config;
+  const fixedVersions = config.fixedVersions = {};
   const packages = getPackages(path);
-  const latestVersions = {};
   const pushPackages = getPushPackages({
     packages,
     fixedVersions,
@@ -48,7 +47,10 @@ function pull() {
   return latestPackages;
 }
 
-function auto() {}
+function auto() {
+  const latestPackages = pull();
+  return push(latestPackages);
+}
 
 const actions = {
   push,
