@@ -3,9 +3,9 @@
 const getPackages = require("get-monorepo-packages");
 const { error } = require("./log");
 const getConfig = require("./getConfig");
-const getPushPackages = require("./getPushPackages");
-const commit = require("./commit");
-const { confirmPush } = require("./confirmPush");
+const getPushPackages = require("./push/getPushPackages");
+const commit = require("./push/commit");
+const { confirmPush } = require("./push/confirmPush");
 
 const [, , action] = process.argv;
 const path = process.cwd();

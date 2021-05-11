@@ -1,5 +1,5 @@
-const getPushPackages = require("../getPushPackages");
-const { getMessage } = require("../confirmPush");
+const getPushPackages = require("../push/getPushPackages");
+const { getMessage } = require("../push/confirmPush");
 
 const packages = [
   {

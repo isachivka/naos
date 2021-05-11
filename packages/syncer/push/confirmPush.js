@@ -1,10 +1,5 @@
 const readline = require("readline");
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
 const pushUniq = (arr, item) => {
   if (arr.indexOf(item) === -1) {
     arr.push(item);
@@ -48,6 +43,11 @@ function getMessage(pushPackages) {
 }
 
 function confirmPush(pushPackages) {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
   return new Promise((res, rej) => {
     const message = getMessage(pushPackages);
     console.log(message);
