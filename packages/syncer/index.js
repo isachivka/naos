@@ -20,7 +20,6 @@ function push(latestVersions = {}) {
     ...getPackages(path),
     { location: path, package: require(resolve(path, "package.json")) },
   ];
-  console.log(packages);
   const pushPackages = getPushPackages({
     packages,
     fixedVersions,
