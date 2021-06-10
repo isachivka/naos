@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.1.1...@naos/syncer@1.1.2) (2021-06-10)
+
+
+### Bug Fixes
+
+* **syncer:** Remove useless console.log ([c002578](https://github.com/isachivka/publish-hook/commit/c002578b3ad787b271345a0850060f00df7369a8))
+
+
+
+
+
 ## [1.1.1](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.1.0...@naos/syncer@1.1.1) (2021-06-10)
 
 
