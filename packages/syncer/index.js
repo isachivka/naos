@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const { resolve } = require("path");
 const getPackages = require("get-monorepo-packages");
 const { error } = require("./log");
 const getConfig = require("./getConfig");
@@ -14,8 +15,12 @@ const path = process.cwd();
 
 function push(latestVersions = {}) {
   const config = getConfig(path);
-  const fixedVersions = config.fixedVersions = {};
-  const packages = getPackages(path);
+  const fixedVersions = (config.fixedVersions = {});
+  const packages = [
+    ...getPackages(path),
+    { location: path, package: require(resolve(path, "package.json")) },
+  ];
+  console.log(packages);
   const pushPackages = getPushPackages({
     packages,
     fixedVersions,
