@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.1.0...@naos/syncer@1.1.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **syncer:** Add root package.json to sync ([d0480f3](https://github.com/isachivka/publish-hook/commit/d0480f382c4a24c1ccbd25ae9e5cce4bf7a5c727))
+
+
+
+
+
 # 1.1.0 (2021-05-11)
 
 
