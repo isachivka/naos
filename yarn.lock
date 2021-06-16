@@ -3185,7 +3185,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-fetch-blob@^1.0.5:
+fetch-blob@^1.0.6:
   version "1.0.7"
   resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/fetch-blob/-/fetch-blob-1.0.7.tgz#c2ceffcde92dac1613c26289cd006019859ec2aa"
   integrity sha1-ws7/zektrBYTwmKJzQBgGYWewqo=
@@ -5364,13 +5364,13 @@ node-fetch@^2.6.1:
   resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
 
-node-fetch@^3.0.0-beta.2:
-  version "3.0.0-beta.2"
-  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/node-fetch/-/node-fetch-3.0.0-beta.2.tgz#21dab0112c90d66d5d8b4f1e7a895cae5ac9d391"
-  integrity sha1-IdqwESyQ1m1di08eeolcrlrJ05E=
+node-fetch@^3.0.0-beta.9:
+  version "3.0.0-beta.6-exportfix"
+  resolved "https://artifactory.infrateam.xyz:443/api/npm/npm/node-fetch/-/node-fetch-3.0.0-beta.6-exportfix.tgz#fc39091dd71487c48a4d02ebcd3474b5c578fdea"
+  integrity sha1-/DkJHdcUh8SKTQLrzTR0tcV4/eo=
   dependencies:
     data-uri-to-buffer "^3.0.0"
-    fetch-blob "^1.0.5"
+    fetch-blob "^1.0.6"
 
 node-gyp@^5.0.2:
   version "5.1.1"
