@@ -46,7 +46,7 @@ function push(latestVersions = {}) {
 
 function pull() {
   const config = getConfig(path);
-  const latestPackages = getLatestPackages(config.sources || [], path);
+  const latestPackages = getLatestPackages(config.sources || [], config.fixedVersions, path);
   printMessage(latestPackages);
   return latestPackages;
 }
