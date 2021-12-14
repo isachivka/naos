@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.1.2...@naos/syncer@1.2.0) (2021-12-14)
+
+
+### Bug Fixes
+
+* **syncer:** Fix for config using ([1ee813d](https://github.com/isachivka/publish-hook/commit/1ee813d3a117f843c77602e97ceb24c18920a4de))
+
+
+### Features
+
+* **syncer:** Ability to set fixed packages verions ([e7a4f2e](https://github.com/isachivka/publish-hook/commit/e7a4f2e403b174aa5ba4da6e0db2bfd412be2f17))
+
+
+
+
+
 ## [1.1.2](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.1.1...@naos/syncer@1.1.2) (2021-06-10)
 
 
