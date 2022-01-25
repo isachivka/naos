@@ -1,5 +1,5 @@
 const path = require("path");
-const getPackages = require("get-monorepo-packages");
+const getPackages = require("../utils/getPackages");
 
 function getLatestPackages(sources, fixedVersions, root) {
   const repositories = sources.map((relPath) => path.resolve(root, relPath));

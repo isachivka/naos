@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const { resolve } = require("path");
-const getPackages = require("get-monorepo-packages");
+const getPackages = require("./utils/getPackages");
 const { error } = require("./log");
 const getConfig = require("./getConfig");
 const getPushPackages = require("./push/getPushPackages");
