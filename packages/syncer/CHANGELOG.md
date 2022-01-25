@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.2.0...@naos/syncer@1.2.1) (2022-01-25)
+
+
+### Bug Fixes
+
+* **syncer:** Fork getMonorepoPackages for ignoring lerna.json ([188f152](https://github.com/isachivka/publish-hook/commit/188f1528d8a2cdbfe595098ce4743891c5f0d655))
+
+
+
+
+
 # [1.2.0](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.1.2...@naos/syncer@1.2.0) (2021-12-14)
 
 
