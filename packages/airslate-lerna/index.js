@@ -46,7 +46,7 @@ function normalize(pkg) {
   const keys = Object.keys(pkg);
 
   return keys.map((key) => ({
-    name: key,
+    id: key,
     value: pkg[key],
   }));
 }
