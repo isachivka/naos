@@ -1,6 +1,6 @@
 {
   "name": "@naos/airslate-external",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "repository": "git@github.com:isachivka/publish-hook.git",
   "author": "Igor Sachivka <juicy.igor@gmail.com>",
