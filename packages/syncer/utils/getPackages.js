@@ -1,10 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const globby = require('globby');
-const loadJsonFile = require('load-json-file');
+const fs = require("fs");
+const path = require("path");
+const globby = require("globby");
+const loadJsonFile = require("load-json-file");
 
-const loadPackage = packagePath => {
-  const pkgJsonPath = path.join(packagePath, 'package.json');
+const loadPackage = (packagePath) => {
+  const pkgJsonPath = path.join(packagePath, "package.json");
   if (fs.existsSync(pkgJsonPath)) {
     return loadJsonFile.sync(pkgJsonPath);
   }
@@ -17,18 +17,18 @@ const findPackages = (packageSpecs, rootDirectory) => {
         ...pkgDirs,
         ...(globby.hasMagic(pkgGlob)
           ? globby.sync(path.join(rootDirectory, pkgGlob), {
-            nodir: false,
-          })
+              nodir: false,
+            })
           : [path.join(rootDirectory, pkgGlob)]),
       ],
       []
     )
-    .map(location => ({ location, package: loadPackage(location) }))
+    .map((location) => ({ location, package: loadPackage(location) }))
     .filter(({ package: { name } = {} }) => name);
 };
 
-const getPackages = directory => {
-  const pkgJsonPath = path.join(directory, 'package.json');
+const getPackages = (directory) => {
+  const pkgJsonPath = path.join(directory, "package.json");
   if (fs.existsSync(pkgJsonPath)) {
     const pkgJson = loadJsonFile.sync(pkgJsonPath);
     let workspaces = pkgJson.workspaces;
