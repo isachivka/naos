@@ -27,7 +27,7 @@ function onEnd() {
       const version = pkg[1].value;
       const title = `${name}@${version}`;
       airslateExternal
-        .createSlateAutolink(parser.parse_args().token, pkg)
+        .createSlate(parser.parse_args().token, pkg)
         .then(() => console.log(`🧬 ${title} created as a slate`))
         .catch((error) =>
           console.error(
