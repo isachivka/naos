@@ -8,13 +8,27 @@ jobs:
         node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: Setup Node ${{ matrix.node_version }}
         uses: actions/setup-node@v1
-        with:
-          always-auth: true
-          node-version: ${{ matrix.node-version }}
-          registry-url: "https://artifactory.infrateam.xyz/api/npm/npm/"
-      - run: yarn --ignore-engines
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: npm config set registry
+        run: npm config set registry https://artifactory.infrateam.xyz/artifactory/api/npm/npm/
+      - name: set npm authToken
+        run: echo "//artifactory.infrateam.xyz/artifactory/api/npm/npm/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+      - name: set npm auth
+        run: echo "//artifactory.infrateam.xyz/artifactory/api/npm/npm/:_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+      - name: set always-auth
+        run: echo "//artifactory.infrateam.xyz/artifactory/api/npm/npm/:always-auth = true" >> ~/.npmrc
+
+      - name: set npm legacy authToken
+        run: echo "//artifactory.infrateam.xyz/api/npm/npm/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+      - name: set npm legacy auth
+        run: echo "//artifactory.infrateam.xyz/api/npm/npm/:_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+      - name: set legacy always-auth
+        run: echo "//artifactory.infrateam.xyz/api/npm/npm/:always-auth = true" >> ~/.npmrc
+
+      - name: Install dependencies
+        run: yarn --ignore-engines
+
       - run: yarn jest
