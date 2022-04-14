@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/isachivka/publish-hook/compare/@naos/airslate-external@2.0.1...@naos/airslate-external@2.0.2) (2022-04-14)
+
+
+### Bug Fixes
+
+* **airslate-external:** Fix node-fetch version ([1734aeb](https://github.com/isachivka/publish-hook/commit/1734aebae76eb0499035ed272a006b53a38fc2bf))
+
+
+
+
+
 ## [2.0.1](https://github.com/isachivka/publish-hook/compare/@naos/airslate-external@2.0.0...@naos/airslate-external@2.0.1) (2022-04-14)
 
 

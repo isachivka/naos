@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.2.1...@naos/syncer@1.2.2) (2022-04-14)
+
+
+### Bug Fixes
+
+* **syncer:** Fix lint ([2b4031f](https://github.com/isachivka/publish-hook/commit/2b4031f9ccc2c9c474f5c370259a4a7619d0c3e5))
+
+
+
+
+
 ## [1.2.1](https://github.com/isachivka/publish-hook/compare/@naos/syncer@1.2.0...@naos/syncer@1.2.1) (2022-01-25)
 
 
