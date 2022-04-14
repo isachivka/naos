@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.3.0...@naos/airslate-lerna@1.3.1) (2022-04-14)
+
+
+### Bug Fixes
+
+* **airslate-lerna:** Fix createSlate function call ([78d5924](https://github.com/isachivka/publish-hook/commit/78d59249d8d792e4a3022c684f81b6e0e62c7448))
+
+
+
+
+
 # [1.3.0](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.2.4...@naos/airslate-lerna@1.3.0) (2022-04-14)
 
 
