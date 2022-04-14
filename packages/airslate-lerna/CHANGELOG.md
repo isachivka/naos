@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.2.4...@naos/airslate-lerna@1.3.0) (2022-04-14)
+
+
+### Features
+
+* **airslate-lerna:** Fix data for @naos/airslate-external new format ([5cfa34e](https://github.com/isachivka/publish-hook/commit/5cfa34e16c95df003fc4cf5e4e4a6ac9ebfe53a1))
+
+
+
+
+
 ## [1.2.4](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.2.3...@naos/airslate-lerna@1.2.4) (2021-06-16)
 
 **Note:** Version bump only for package @naos/airslate-lerna

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/isachivka/publish-hook/compare/@naos/airslate-external@1.1.2...@naos/airslate-external@2.0.0) (2022-04-14)
+
+
+### Features
+
+* **airslate-external:** Simplify createSlate after airSlate update ([70e5827](https://github.com/isachivka/publish-hook/commit/70e58271d81a66d9bec1badbf5d9813589301e19))
+
+
+### BREAKING CHANGES
+
+* **airslate-external:** Removed useless methods
+
+
+
+
+
 ## [1.1.2](https://github.com/isachivka/publish-hook/compare/@naos/airslate-external@1.1.1...@naos/airslate-external@1.1.2) (2021-06-16)
 
 
