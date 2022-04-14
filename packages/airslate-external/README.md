@@ -7,42 +7,16 @@
 ```js
 const fields = [
   {
-    id: 'E9F25E89-FD00-0000-000021F6-0001',
-    name: 'package-name',
-    value: 'name',
+    id: 'name',
+    value: 'Igor',
   },
   {
-    id: 'E9F25E89-FD00-0000-000021F6-0002',
-    name: "package-changelog",
-    value: "changelog",
+    id: 'surname',
+    value: "Sachivka",
   }
 ];
-
-const fieldsWithoutId = [
-  {
-    name: 'package-name',
-    value: 'name',
-  },
-  {
-    name: "package-changelog",
-    value: "changelog",
-  }
-];
-
-getSample(token)
-  .then(JSON.stringify)
-  .then(console.log);
 
 createSlate(token, fields)
-  .then(JSON.stringify)
-  .then(console.log);
-
-getStructure(token)
-  .then(JSON.stringify)
-  .then(console.log);
-
-// Two API calls, sample -> createSlate, experimental
-createSlateAutolink(token, fieldsWithoutId)
   .then(JSON.stringify)
   .then(console.log);
 ```
