@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 
-const lodash = require("lodash");
 const fs = require("fs");
 const getPackages = require("get-monorepo-packages");
 const airslateExternal = require("@naos/airslate-external");
 const { ArgumentParser } = require("argparse");
 const parseResult = require("./parseResult");
+const { getAllPackages } = require("./getAllPackages");
 
 const parser = new ArgumentParser({});
 parser.add_argument("-t", "--token");
+parser.add_argument("-o", "--owner");
+parser.add_argument("-r", "--repo");
 
 let data = "";
 
@@ -17,73 +19,41 @@ function onMessage(chunk) {
   console.log(chunk.toString());
 }
 
+function getMessageForPackage(pk) {
+  const path = `${pk.location}/CHANGELOG.md`;
+  if (fs.existsSync(path)) {
+    return `<https://github.com/${parser.parse_args().owner}/${
+      parser.parse_args().repo
+    }/blob/master/${path.replace("./", "")}|${pk.name}@${pk.version}> \n`;
+  }
+
+  return `${pp.name}@${pp.version} \n`;
+}
+
 function onEnd() {
   const publishedPackages = parseResult(data, getPackages("./"));
+  const namesPublished = publishedPackages.map((pp) => pp.name);
+  const allPackages = getAllPackages();
+  const otherPackages = allPackages.filter(
+    (ap) => namesPublished.indexOf(ap.name) === -1
+  );
   if (publishedPackages) {
-    const packagesWithChangelog = appendChangelogs(publishedPackages);
-    const normalized = packagesWithChangelog.map(normalize);
-    normalized.forEach((pkg) => {
-      const name = pkg[0].value;
-      const version = pkg[1].value;
-      const title = `${name}@${version}`;
-      airslateExternal
-        .createSlate(parser.parse_args().token, pkg)
-        .then(() => console.log(`🧬 ${title} created as a slate`))
-        .catch((error) =>
-          console.error(
-            `🆘 ${title} slate creation failed\n\n${error.toString()}`
-          )
-        );
+    let slackMessage = `**Published packages:** \n\n`;
+    publishedPackages.forEach((pp) => {
+      slackMessage += getMessageForPackage(pp);
+    });
+
+    slackMessage += `\n**Other packages:** \n\n`;
+
+    otherPackages.forEach((op) => {
+      slackMessage += getMessageForPackage(op);
+    });
+
+    airslateExternal.createSlate(parser.parse_args().token, {
+      id: "message",
+      value: slackMessage,
     });
   }
-}
-
-function appendChangelogs(packages) {
-  return packages.map(appendChangelog);
-}
-
-function normalize(pkg) {
-  const keys = Object.keys(pkg);
-
-  return keys.map((key) => ({
-    id: key,
-    value: pkg[key],
-  }));
-}
-
-/**
- * God help you
- */
-function appendChangelog(pkg) {
-  const path = `${pkg.location}/CHANGELOG.md`;
-  if (fs.existsSync(path)) {
-    const content = fs.readFileSync(path).toString().split("\n");
-
-    const selectedContent = [];
-    let started = false;
-    let finished = false;
-    let i = 1;
-
-    while (i < content.length && !finished) {
-      const chunk = content[i];
-      const start =
-        lodash.startsWith(chunk, "## ") || lodash.startsWith(chunk, "# ");
-      if (started && !finished && start) finished = true;
-      if (!started && start) started = true;
-      if (started && !finished) selectedContent.push(chunk);
-      i++;
-    }
-
-    const changelog = selectedContent.join("\n");
-
-    return {
-      name: pkg.name,
-      version: pkg.version,
-      changelog,
-    };
-  }
-
-  return pkg;
 }
 
 process.stdin.resume();

@@ -6,7 +6,7 @@ Based on `@naos/airslate-external`
 
 ```shell script
 yarn add airslate-lerna
-lerna publish 2>&1 | airslate-lerna --token=*** 
+lerna publish 2>&1 | airslate-lerna --token=*** --owner=*** --- repo=***
                # airSlate external bot token 👆🏻
 ```
 
