@@ -1,6 +1,6 @@
 {
   "name": "@naos/airslate-lerna",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "bin": {
     "airslate-lerna": "./index.js"
   },
