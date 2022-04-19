@@ -30,6 +30,14 @@ function getMessageForPackage(pk) {
   return `${pp.name}@${pp.version} \n`;
 }
 
+function getFixedVersions(allPackages) {
+  const obj = {};
+  allPackages.forEach((ap) => {
+    obj[ap.name] = obj[ap.version];
+  });
+  return JSON.stringify(obj, null, 2);
+}
+
 function onEnd() {
   const publishedPackages = parseResult(data, getPackages("./"));
   if (publishedPackages) {
@@ -38,16 +46,20 @@ function onEnd() {
     const otherPackages = allPackages.filter(
       (ap) => namesPublished.indexOf(ap.name) === -1
     );
-    let slackMessage = `**Published packages:** \n\n`;
+    let slackMessage = `*Published packages:* \n\n`;
     publishedPackages.forEach((pp) => {
       slackMessage += getMessageForPackage(pp);
     });
 
-    slackMessage += `\n**Other packages:** \n\n`;
+    slackMessage += `\n*Other packages:* \n\n`;
 
     otherPackages.forEach((op) => {
       slackMessage += getMessageForPackage(op);
     });
+
+    slackMessage += `\n*Fixed versions:* \n\n`;
+
+    slackMessage += `\`\`\`${getFixedVersions(allPackages)}\`\`\``;
 
     airslateExternal
       .createSlate(parser.parse_args().token, [
