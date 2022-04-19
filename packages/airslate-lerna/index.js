@@ -32,12 +32,12 @@ function getMessageForPackage(pk) {
 
 function onEnd() {
   const publishedPackages = parseResult(data, getPackages("./"));
-  const namesPublished = publishedPackages.map((pp) => pp.name);
-  const allPackages = getAllPackages();
-  const otherPackages = allPackages.filter(
-    (ap) => namesPublished.indexOf(ap.name) === -1
-  );
   if (publishedPackages) {
+    const namesPublished = publishedPackages.map((pp) => pp.name);
+    const allPackages = getAllPackages();
+    const otherPackages = allPackages.filter(
+      (ap) => namesPublished.indexOf(ap.name) === -1
+    );
     let slackMessage = `**Published packages:** \n\n`;
     publishedPackages.forEach((pp) => {
       slackMessage += getMessageForPackage(pp);
