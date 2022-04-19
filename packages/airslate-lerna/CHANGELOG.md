@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.4.0...@naos/airslate-lerna@1.4.1) (2022-04-19)
+
+
+### Bug Fixes
+
+* **airslate-lerna:** Hotfix, add if berore map ([f1381a2](https://github.com/isachivka/publish-hook/commit/f1381a2d9aa9a10c30b6113eecb47c249759f7df))
+
+
+
+
+
 # [1.4.0](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.3.3...@naos/airslate-lerna@1.4.0) (2022-04-19)
 
 
