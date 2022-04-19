@@ -49,10 +49,17 @@ function onEnd() {
       slackMessage += getMessageForPackage(op);
     });
 
-    airslateExternal.createSlate(parser.parse_args().token, {
-      id: "message",
-      value: slackMessage,
-    });
+    airslateExternal
+      .createSlate(parser.parse_args().token, {
+        id: "message",
+        value: slackMessage,
+      })
+      .then((success) => {
+        console.log("success", success);
+      })
+      .catch((error) => {
+        console.error("error", error.json());
+      });
   }
 }
 
