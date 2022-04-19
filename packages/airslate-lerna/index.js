@@ -6,6 +6,7 @@ const airslateExternal = require("@naos/airslate-external");
 const { ArgumentParser } = require("argparse");
 const parseResult = require("./parseResult");
 const { getAllPackages } = require("./getAllPackages");
+const { getFixedVersions } = require("./getFixedVesions");
 
 const parser = new ArgumentParser({});
 parser.add_argument("-t", "--token");
@@ -28,14 +29,6 @@ function getMessageForPackage(pk) {
   }
 
   return `${pp.name}@${pp.version} \n`;
-}
-
-function getFixedVersions(allPackages) {
-  const obj = {};
-  allPackages.forEach((ap) => {
-    obj[ap.name] = obj[ap.version];
-  });
-  return JSON.stringify(obj, null, 2);
 }
 
 function onEnd() {
