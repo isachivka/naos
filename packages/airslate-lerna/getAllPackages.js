@@ -14,7 +14,7 @@ function getAllPackages() {
       }
       return {
         name: split[0],
-        version: split[1],
+        version: split[1].replace("v", ""),
         location: `./${split[2]}`,
       };
     })
