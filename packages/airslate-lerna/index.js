@@ -50,10 +50,12 @@ function onEnd() {
     });
 
     airslateExternal
-      .createSlate(parser.parse_args().token, {
-        id: "message",
-        value: slackMessage,
-      })
+      .createSlate(parser.parse_args().token, [
+        {
+          id: "message",
+          value: slackMessage,
+        },
+      ])
       .then((success) => {
         console.log("success", success);
       })
