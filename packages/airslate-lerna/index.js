@@ -21,6 +21,10 @@ function onMessage(chunk) {
   console.log(chunk.toString());
 }
 
+function getMessageGhForPackage(pk) {
+  return `${pp.name}@${pp.version} \n`;
+}
+
 function getMessageForPackage(pk) {
   const path = `${pk.location}/CHANGELOG.md`;
   if (fs.existsSync(path)) {
@@ -73,7 +77,18 @@ function onEnd() {
       });
 
     if (parser.parse_args().file === "1") {
-      fs.writeFileSync("./output", slackMessage);
+      let ghMessage = `**Published packages:** \n\n`;
+      publishedPackages.forEach((pp) => {
+        ghMessage += getMessageGhForPackage(pp);
+      });
+
+      ghMessage += `\n**Fixed versions:** \n\n`;
+
+      ghMessage += `\`\`\`
+        ${getFixedVersions(allPackages, publishedPackages)}
+      \`\`\``;
+
+      fs.writeFileSync("./output", ghMessage);
     }
   }
 }
