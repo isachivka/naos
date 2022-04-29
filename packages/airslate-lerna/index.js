@@ -85,8 +85,8 @@ function onEnd() {
       ghMessage += `\n**Fixed versions:** \n\n`;
 
       ghMessage += `\`\`\`
-        ${getFixedVersions(allPackages, publishedPackages)}
-      \`\`\``;
+${getFixedVersions(allPackages, publishedPackages)}
+\`\`\``;
 
       fs.writeFileSync("./output", ghMessage);
     }
