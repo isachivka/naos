@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.4.7...@naos/airslate-lerna@1.5.0) (2022-04-29)
+
+
+### Features
+
+* **airslate-lerna:** Add file output ([a9ea746](https://github.com/isachivka/publish-hook/commit/a9ea7461d619293fcb255eef8689a3f2471ed929))
+
+
+
+
+
 ## [1.4.7](https://github.com/isachivka/publish-hook/compare/@naos/airslate-lerna@1.4.6...@naos/airslate-lerna@1.4.7) (2022-04-29)
 
 
