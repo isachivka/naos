@@ -22,7 +22,7 @@ function onMessage(chunk) {
 }
 
 function getMessageGhForPackage(pk) {
-  return `${pp.name}@${pp.version} \n`;
+  return `${pk.name}@${pk.version} \n`;
 }
 
 function getMessageForPackage(pk) {
@@ -33,7 +33,7 @@ function getMessageForPackage(pk) {
     }/blob/master/${path.replace("./", "")}|${pk.name}@${pk.version}> \n`;
   }
 
-  return `${pp.name}@${pp.version} \n`;
+  return `${pk.name}@${pk.version} \n`;
 }
 
 function onEnd() {
