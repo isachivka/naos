@@ -52,7 +52,10 @@ function onEnd() {
 
     slackMessage += `\n*Fixed versions:* \n\n`;
 
-    slackMessage += `\`\`\`${getFixedVersions(allPackages)}\`\`\``;
+    slackMessage += `\`\`\`${getFixedVersions(
+      allPackages,
+      publishedPackages
+    )}\`\`\``;
 
     airslateExternal
       .createSlate(parser.parse_args().token, [
