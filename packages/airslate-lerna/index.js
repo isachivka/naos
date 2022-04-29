@@ -12,6 +12,7 @@ const parser = new ArgumentParser({});
 parser.add_argument("-t", "--token");
 parser.add_argument("-o", "--owner");
 parser.add_argument("-r", "--repo");
+parser.add_argument("-f", "--file");
 
 let data = "";
 
@@ -70,6 +71,10 @@ function onEnd() {
       .catch((error) => {
         console.error("error", error.json());
       });
+
+    if (parser.parse_args().file === "1") {
+      fs.writeFileSync("./output", slackMessage);
+    }
   }
 }
 
