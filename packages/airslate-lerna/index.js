@@ -90,6 +90,8 @@ ${getFixedVersions(allPackages, publishedPackages)}
 
       fs.writeFileSync("./output", ghMessage);
     }
+  } else {
+    fs.writeFileSync("./output", `Nothing published`);
   }
 }
 
