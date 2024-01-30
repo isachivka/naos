@@ -6,6 +6,6 @@
   "author": "Igor Sachivka <juicy.igor@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "3.0.0-beta.9"
+    "node-fetch": "3.3.2"
   }
 }
