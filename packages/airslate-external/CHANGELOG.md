@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/isachivka/publish-hook/compare/@naos/airslate-external@2.1.1...@naos/airslate-external@2.1.2) (2024-01-30)
+
+
+### Bug Fixes
+
+* **airslate-external:** Use a hack to cjs/esm imports ([bec2716](https://github.com/isachivka/publish-hook/commit/bec271643b05270c450d2bf1473f5b35078a6b38))
+
+
+
+
+
 ## [2.1.1](https://github.com/isachivka/publish-hook/compare/@naos/airslate-external@2.1.0...@naos/airslate-external@2.1.1) (2024-01-30)
 
 
