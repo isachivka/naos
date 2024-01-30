@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/isachivka/publish-hook/compare/@naos/airslate-external@2.1.0...@naos/airslate-external@2.1.1) (2024-01-30)
+
+
+### Bug Fixes
+
+* **airslate-external:** Fix wrong require() for ESM ([021f5af](https://github.com/isachivka/publish-hook/commit/021f5afa558d65c5670d969ba32539df57d9f763))
+
+
+
+
+
 # [2.1.0](https://github.com/isachivka/publish-hook/compare/@naos/airslate-external@2.0.2...@naos/airslate-external@2.1.0) (2024-01-30)
 
 
