@@ -73,7 +73,7 @@ function onEnd() {
         console.log("success", success);
       })
       .catch((error) => {
-        console.error("error", error.json());
+        console.error("error", error);
       });
 
     if (parser.parse_args().file === "1") {
